@@ -1,0 +1,8 @@
+Prompt user for height
+Prompt user again if not an integer between 1 and 8 inclusive
+Skip line for each row until row exceeds height inputted
+    for each row, print number of spaces (starting at 1) equal to height - row until spaces = 0
+    for each row, print number of hashes equal to counter starting at 1 until hashes exceeds height (or row number)
+
+
+
