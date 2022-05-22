@@ -1,0 +1,57 @@
+sort1 uses: Bubble
+How do you know?:
+We observe that the random and reversed take much, much longer than the sorted numbers.
+It is the case that with bubble sort, sorted lists of length n only require n steps compared to a "worse case scenario" of n^2 steps.
+
+
+sorted[1] 50,000 = 0.666s
+sorted[1] 10,000 = 0.083s
+sorted[1] 5,000 = 0.054s
+
+random[1] 50,000 = 8.228s
+random[1] 10,000 = 0.391s
+random[1] 5,000 = 0.122s
+
+reversed[1] 50,000 = 6.443s
+reversed[1] 10,000 = 0.297s
+reversed[1] 5,000 = 0.081s
+_______
+sort2 uses: Merge
+How do you know?:
+We observe that the times across sorted, random, and reversed categories, for a given n, are relatively comparable and show no clear trend.
+Like selection, merge must go through the same steps regardless of how sorted or unsorted it is. However, we know this is likely merge sort not selection because merge only requires n*log(n) steps compared to n^2 of selection.
+It is most obvious when we look at n=50,000 (due to exponential increase in time) across the merge and selection sort results that the time are far less for this instance than the last.
+
+
+sorted[2] 50,000 = 0.641s
+sorted[2] 10,000 = 0.005s
+sorted[2] 5,000 = 0.023s
+
+random[2] 50,000 = 0.563s
+random[2] 10,000 = 0.191s
+random[2] 5,000 = 0.052s
+
+reversed[2] 50,000 = 0.372s
+reversed[2] 10,000 = 0.070s
+reversed[2] 5,000 = 0.034s
+
+_______
+sort3 uses: Selection
+How do you know?:
+Across sorted, random, and reversed categories, for a given n, the times are pretty comparable.
+With selection, the program must take n^2 steps no matter how sorted or unsorted the numbers are, so the above observation tells us this is most likely the selection sort.
+Merge also has the same "worst-case" and "best-case" scenario steps, however we see that this sort runs more slowly (most obviously at n=50,000) than the second sort.
+
+sorted[3] 50,000 = 3.826s
+sorted[3] 10,000 = 0.178s
+sorted[3] 5,000 = 0.118s
+
+random[3] 50,000 = 3.649s
+random[3] 10,000 = 0.180s
+random[3] 5,000 = 0.080s
+
+reversed[3] 50,000 = 3.683s
+reversed[3] 10,000 = 0.229s
+reversed[3] 5,000 = 0.064s
+
+
